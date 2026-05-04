@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Spécialiste appels d'offres BTP. Nous trouvons et montons vos dossiers pour décrocher des marchés publics.">
+    <title>AO BTP Assistance - Spécialiste Appels d'Offres BTP</title>
+    <style>
+        :root {
+            --primary: #FF6B35;
+            --primary-dark: #E85A28;
+            --secondary: #004E89;
+            --secondary-dark: #003A66;
+            --accent: #FFD700;
+            --text: #1a1a1a;
+            --text-light: #4a4a4a;
+            --bg: #FAFAFA;
+            --white: #FFFFFF;
+            --success: #10B981;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: Impact, 'Arial Black', sans-serif;
+            letter-spacing: 1px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25D366;
+            color: white;
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.5);
+            z-index: 9999;
+            text-decoration: none;
+        }
+
+        .urgency-banner {
+            background: linear-gradient(135deg, #F59E0B 0%, #F97316 100%);
+            color: white;
+            padding: 12px 0;
+            text-align: center;
+            font-weight: 700;
+            font-size: 15px;
+        }
+
+        header {
+            background: var(--white);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--secondary);
+        }
+
+        .logo span {
+            color: var(--primary);
+        }
+
+        .header-cta {
+            display: flex;
+            gap: 16px;
+        }
+
+        .btn {
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 15px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--secondary);
+            border: 2px solid var(--secondary);
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-dark) 100%);
+            color: var(--white);
+            padding: 60px 0 80px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            line-height: 1.1;
+            margin-bottom: 24px;
+        }
+
+        .hero h1 span {
+            color: var(--accent);
+            display: block;
+        }
+
+        .hero-subtitle {
+            font-size: 20px;
+            margin-bottom: 16px;
+        }
+
+        .hero-description {
+            font-size: 17px;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+
+        .hero-ctas {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .btn-large {
+            padding: 16px 32px;
+            font-size: 16px;
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+
+        .hero-contact-direct {
+            margin-top: 16px;
+            font-size: 16px;
+        }
+
+        .hero-contact-direct a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+            padding-top: 50px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 40px;
+            font-weight: 900;
+            color: var(--accent);
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .trust-bar {
+            background: var(--white);
+            padding: 24px 0;
+        }
+
+        .trust-items {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 24px;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 600;
+            color: var(--text-light);
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-tag {
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 16px;
+        }
+
+        .section-title {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .section-subtitle {
+            font-size: 18px;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .problem {
+            background: var(--white);
+        }
+
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .problem-card {
+            background: var(--bg);
+            padding: 30px 24px;
+            border-radius: 12px;
+            border-left: 4px solid var(--primary);
+        }
+
+        .problem-icon {
+            font-size: 40px;
+            margin-bottom: 16px;
+        }
+
+        .problem-card h3 {
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+
+        .problem-card p {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        .solution {
+            background: #f8f9fa;
+        }
+
+        .solution-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .solution-card {
+            background: var(--white);
+            padding: 40px 30px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .solution-number {
+            width: 60px;
+            height: 60px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            font-weight: 900;
+            color: var(--white);
+            margin: 0 auto 20px;
+        }
+
+        .solution-card h3 {
+            font-size: 24px;
+            margin-bottom: 16px;
+        }
+
+        .solution-card p {
+            color: var(--text-light);
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .solution-features {
+            list-style: none;
+            text-align: left;
+        }
+
+        .solution-features li {
+            padding: 8px 0;
+            color: var(--text-light);
+        }
+
+        .solution-features li::before {
+            content: '✓ ';
+            color: var(--success);
+            font-weight: 900;
+        }
+
+        .testimonials {
+            background: var(--white);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .testimonial-card {
+            background: var(--bg);
+            padding: 30px 24px;
+            border-radius: 12px;
+            border-left: 4px solid var(--accent);
+        }
+
+        .testimonial-quote {
+            font-size: 16px;
+            font-style: italic;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            color: white;
+            font-weight: 700;
+        }
+
+        .author-name {
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .author-company {
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        .testimonial-result {
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 2px solid rgba(255, 215, 0, 0.3);
+            font-weight: 700;
+            color: var(--success);
+            font-size: 14px;
+        }
+
+        .case-study {
+            background: #f8f9fa;
+        }
+
+        .case-container {
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-dark) 100%);
+            border-radius: 20px;
+            padding: 50px 30px;
+            color: var(--white);
+        }
+
+        .case-tag {
+            background: rgba(255, 215, 0, 0.2);
+            color: var(--accent);
+            padding: 8px 20px;
+            border-radius: 30px;
+            display: inline-block;
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .case-header h2 {
+            font-size: 32px;
+            margin-bottom: 16px;
+        }
+
+        .case-story {
+            font-size: 16px;
+            line-height: 1.7;
+            margin: 30px 0;
+        }
+
+        .case-quote {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-left: 4px solid var(--accent);
+            border-radius: 8px;
+            margin: 20px 0;
+            font-style: italic;
+        }
+
+        .case-results {
+            background: rgba(255,255,255,0.05);
+            padding: 30px;
+            border-radius: 12px;
+            margin-top: 30px;
+        }
+
+        .case-results h3 {
+            font-size: 24px;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+
+        .result-item {
+            margin-bottom: 24px;
+            text-align: center;
+        }
+
+        .result-label {
+            font-size: 12px;
+            opacity: 0.8;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        .result-value {
+            font-size: 40px;
+            font-weight: 900;
+            color: var(--accent);
+            display: block;
+        }
+
+        .pricing {
+            background: var(--white);
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .pricing-card {
+            background: var(--bg);
+            border-radius: 16px;
+            padding: 40px 30px;
+            position: relative;
+        }
+
+        .pricing-card.featured {
+            border: 3px solid var(--primary);
+            background: var(--white);
+        }
+
+        .featured-badge {
+            position: absolute;
+            top: -16px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--primary);
+            color: var(--white);
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 12px;
+        }
+
+        .pricing-header {
+            text-align: center;
+            padding-bottom: 24px;
+            border-bottom: 2px solid rgba(0,0,0,0.1);
+            margin-bottom: 24px;
+        }
+
+        .pricing-name {
+            font-size: 24px;
+            margin-bottom: 12px;
+        }
+
+        .pricing-tagline {
+            color: var(--text-light);
+            font-size: 14px;
+        }
+
+        .pricing-price {
+            text-align: center;
+            margin: 24px 0;
+        }
+
+        .price-amount {
+            font-size: 40px;
+            font-weight: 900;
+            color: var(--secondary);
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .pricing-features li {
+            padding: 10px 0;
+            display: flex;
+            gap: 10px;
+            color: var(--text-light);
+            font-size: 14px;
+        }
+
+        .pricing-features li::before {
+            content: '✓';
+            color: var(--success);
+            font-weight: 900;
+        }
+
+        .guarantee {
+            background: linear-gradient(135deg, var(--accent) 0%, #FFC107 100%);
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .guarantee-badge {
+            width: 80px;
+            height: 80px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            margin: 0 auto 20px;
+        }
+
+        .guarantee h2 {
+            font-size: 32px;
+            margin-bottom: 16px;
+            color: var(--text);
+        }
+
+        .guarantee p {
+            color: var(--text);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .process {
+            background: #f8f9fa;
+        }
+
+        .process-step {
+            margin-bottom: 40px;
+            padding-left: 80px;
+            position: relative;
+        }
+
+        .step-number {
+            position: absolute;
+            left: 0;
+            width: 60px;
+            height: 60px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            font-weight: 900;
+            color: var(--white);
+        }
+
+        .step-content h3 {
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+
+        .step-content p {
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        .faq {
+            background: var(--white);
+        }
+
+        .faq-item {
+            background: var(--bg);
+            border-radius: 12px;
+            margin-bottom: 16px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px 24px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        .faq-toggle {
+            font-size: 24px;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-answer-content {
+            padding: 0 24px 20px;
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        .cta-final {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .cta-final h2 {
+            font-size: 44px;
+            margin-bottom: 20px;
+        }
+
+        .cta-final p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-white {
+            background: var(--white);
+            color: var(--primary);
+        }
+
+        footer {
+            background: var(--text);
+            color: var(--white);
+            padding: 50px 0 30px;
+        }
+
+        .footer-about h3 {
+            font-size: 24px;
+            margin-bottom: 16px;
+        }
+
+        .footer-about p {
+            opacity: 0.8;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .footer-contact {
+            display: flex;
+            gap: 12px;
+            margin: 12px 0;
+        }
+
+        .footer-contact a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer-bottom {
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+            opacity: 0.7;
+            font-size: 14px;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .header-cta .btn-secondary { display: none; }
+            .hero h1 { font-size: 32px; }
+            .hero-stats { grid-template-columns: 1fr; gap: 20px; }
+            .hero-ctas { flex-direction: column; }
+            .btn-large { width: 100%; justify-content: center; }
+            .section-title { font-size: 28px; }
+            .solution-grid, .pricing-grid, .testimonials-grid { grid-template-columns: 1fr; }
+            .case-header h2 { font-size: 24px; }
+            .cta-final h2 { font-size: 28px; }
+            .cta-buttons { flex-direction: column; width: 100%; }
+            .cta-buttons .btn { width: 100%; justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+    <div class="urgency-banner">
+        ⚡ Places limitées ! Seulement 3 nouvelles entreprises accompagnées ce mois-ci
+    </div>
+
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">AO <span>BTP</span></div>
+                <div class="header-cta">
+                    <a href="tel:+33650030068" class="btn btn-secondary">📞 06 50 03 00 68</a>
+                    <a href="mailto:aoassistancebtp@gmail.com" class="btn btn-primary">Contact</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>
+                Vous perdez des chantiers BTP
+                <span>sans même le savoir.</span>
+            </h1>
+            <p class="hero-subtitle">73% des entreprises du bâtiment ne répondent jamais aux appels d'offres publics.</p>
+            <p class="hero-description">
+                Nous vous aidons à identifier les bons marchés, monter des dossiers conformes et décrocher des chantiers réguliers.
+            </p>
+            <div class="hero-ctas">
+                <a href="mailto:aoassistancebtp@gmail.com?subject=Demande%20analyse" class="btn btn-primary btn-large">📧 Analyse gratuite</a>
+                <a href="tel:+33650030068" class="btn btn-outline btn-large">📞 Appeler</a>
+            </div>
+            <p class="hero-contact-direct">
+                Ou : <a href="tel:+33650030068">06 50 03 00 68</a> • <a href="https://wa.me/33650030068">WhatsApp</a>
+            </p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">320K€</span>
+                    <span>Décrochés</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">2/3</span>
+                    <span>Taux de réussite</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">1-2 sem.</span>
+                    <span>Montage dossier</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="trust-bar">
+        <div class="container">
+            <div class="trust-items">
+                <div class="trust-item">
+                    <span>👩‍💼</span>
+                    <span>Spécialiste BTP</span>
+                </div>
+                <div class="trust-item">
+                    <span>🌍</span>
+                    <span>À distance</span>
+                </div>
+                <div class="trust-item">
+                    <span>✅</span>
+                    <span>Sans engagement</span>
+                </div>
+                <div class="trust-item">
+                    <span>⚡</span>
+                    <span>Sous 24h</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="problem">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">Le Vrai Problème</div>
+                <h2 class="section-title">Ce n'est pas votre savoir-faire qui bloque</h2>
+                <p class="section-subtitle">C'est le temps, la méthode et l'administratif.</p>
+            </div>
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <div class="problem-icon">⏰</div>
+                    <h3>Pas le temps</h3>
+                    <p>Vous n'avez pas le temps de chercher et analyser les centaines d'appels d'offres publiés chaque semaine.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">📋</div>
+                    <h3>Trop complexe</h3>
+                    <p>Les dossiers sont longs, techniques. Une simple erreur peut vous éliminer.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">🎯</div>
+                    <h3>Aucune méthode</h3>
+                    <p>Répondre à un marché public demande une méthode précise.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">💸</div>
+                    <h3>Opportunités perdues</h3>
+                    <p>D'autres entreprises remportent des marchés auxquels vous auriez pu répondre.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="solution">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">Notre Approche</div>
+                <h2 class="section-title">Ce que ça change pour vous</h2>
+            </div>
+            <div class="solution-grid">
+                <div class="solution-card">
+                    <div class="solution-number">1</div>
+                    <h3>Veille Ciblée</h3>
+                    <p>Nous identifions les appels d'offres pertinents pour votre activité.</p>
+                    <ul class="solution-features">
+                        <li>Recherche quotidienne</li>
+                        <li>Filtrage selon critères</li>
+                        <li>Alertes email</li>
+                        <li>Gain de temps massif</li>
+                    </ul>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-number">2</div>
+                    <h3>Dossiers Conformes</h3>
+                    <p>Nous montons vos réponses de manière claire et professionnelle.</p>
+                    <ul class="solution-features">
+                        <li>Analyse du DCE</li>
+                        <li>Liste des pièces</li>
+                        <li>Rédaction mémoire</li>
+                        <li>Contrôle avant dépôt</li>
+                    </ul>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-number">3</div>
+                    <h3>Marchés Décrochés</h3>
+                    <p>Vous transformez les AO en levier de croissance.</p>
+                    <ul class="solution-features">
+                        <li>Augmentation CA</li>
+                        <li>Clients publics fiables</li>
+                        <li>Planning rempli</li>
+                        <li>Croissance pérenne</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">Témoignages</div>
+                <h2 class="section-title">Ils nous font confiance</h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">
+                        "On travaillait au bouche-à-oreille. Grâce à AO BTP, on a décroché notre premier marché public de 180K€."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JM</div>
+                        <div>
+                            <div class="author-name">Jean-Marc P.</div>
+                            <div class="author-company">Maçonnerie, Lyon</div>
+                        </div>
+                    </div>
+                    <div class="testimonial-result">✅ 2 marchés sur 3</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">
+                        "Je pensais que c'était réservé aux grosses boîtes. En 3 semaines, j'ai gagné un marché de 65K€."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SD</div>
+                        <div>
+                            <div class="author-name">Sophie D.</div>
+                            <div class="author-company">Plomberie, Bordeaux</div>
+                        </div>
+                    </div>
+                    <div class="testimonial-result">✅ 1er marché décroché</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">
+                        "L'accompagnement est hyper pro. Tout est clair, on sait exactement quoi fournir."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AL</div>
+                        <div>
+                            <div class="author-name">Anthony L.</div>
+                            <div class="author-company">Électricité, Toulouse</div>
+                        </div>
+                    </div>
+                    <div class="testimonial-result">✅ 3 dossiers déposés</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="case-study">
+        <div class="container">
+            <div class="case-container">
+                <div class="case-header">
+                    <div class="case-tag">✨ Cas Client</div>
+                    <h2>De 0 à 320K€ en 18 mois</h2>
+                    <p>📍 Lyon • 15 employés • Maçonnerie</p>
+                </div>
+                <div class="case-story">
+                    <p><strong>Situation :</strong> Entreprise compétente mais qui galère à trouver des chantiers. Jamais répondu à un AO.</p>
+                    <div class="case-quote">
+                        "On bosse bien, mais on passe notre temps à chercher des chantiers."
+                    </div>
+                    <p><strong>Notre accompagnement :</strong> 3 AO adaptés, montage complet, 2 semaines du premier échange au dépôt.</p>
+                </div>
+                <div class="case-results">
+                    <h3>🎯 Résultats</h3>
+                    <div class="result-item">
+                        <div class="result-label">Marchés remportés</div>
+                        <span class="result-value">2/3</span>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-label">Chiffre généré</div>
+                        <span class="result-value">320K€</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">Nos Tarifs</div>
+                <h2 class="section-title">Choisissez votre accompagnement</h2>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-name">Veille Ciblée</h3>
+                        <p class="pricing-tagline">Ne plus passer à côté des bons marchés</p>
+                    </div>
+                    <div class="pricing-price">
+                        <div class="price-amount">150€<span style="font-size: 18px;">/mois</span></div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Recherche quotidienne</li>
+                        <li>Tri des opportunités</li>
+                        <li>Alertes email</li>
+                        <li>Contrôle total</li>
+                    </ul>
+                    <a href="mailto:aoassistancebtp@gmail.com" class="btn btn-secondary" style="width: 100%;">Devis</a>
+                </div>
+                <div class="pricing-card featured">
+                    <div class="featured-badge">⭐ Recommandé</div>
+                    <div class="pricing-header">
+                        <h3 class="pricing-name">Réponse Assistée</h3>
+                        <p class="pricing-tagline">Répondre sans partir de zéro</p>
+                    </div>
+                    <div class="pricing-price">
+                        <div class="price-amount">500€<span style="font-size: 18px;">/dossier</span></div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Lecture DCE</li>
+                        <li>Liste pièces</li>
+                        <li>Aide rédaction</li>
+                        <li>Contrôle dépôt</li>
+                        <li>Taux : ~50%</li>
+                    </ul>
+                    <a href="mailto:aoassistancebtp@gmail.com" class="btn btn-primary" style="width: 100%;">Devis</a>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-name">Accompagnement Complet</h3>
+                        <p class="pricing-tagline">Déléguer tout le montage</p>
+                    </div>
+                    <div class="pricing-price">
+                        <div class="price-amount">1200€<span style="font-size: 18px;">/dossier</span></div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Analyse marché</li>
+                        <li>Montage complet</li>
+                        <li>Mémoire technique</li>
+                        <li>Dépôt et suivi</li>
+                        <li>Taux : ~67%</li>
+                    </ul>
+                    <a href="mailto:aoassistancebtp@gmail.com" class="btn btn-secondary" style="width: 100%;">Devis</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="guarantee">
+        <div class="container">
+            <div class="guarantee-badge">✓</div>
+            <h2>Notre Engagement Qualité</h2>
+            <p>
+                Si votre dossier est refusé pour une erreur de notre part, nous reprenons gratuitement le dossier pour le prochain AO similaire.
+            </p>
+        </div>
+    </section>
+
+    <section class="process">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">Comment Ça Marche</div>
+                <h2 class="section-title">Simple, clair, à distance</h2>
+            </div>
+            <div class="process-step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Premier échange</h3>
+                    <p>Vous nous expliquez votre entreprise. Gratuit et sans engagement.</p>
+                </div>
+            </div>
+            <div class="process-step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Analyse</h3>
+                    <p>Nous analysons vos opportunités réelles d'appels d'offres.</p>
+                </div>
+            </div>
+            <div class="process-step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Proposition</h3>
+                    <p>Nous vous envoyons mission, délai et tarif transparent.</p>
+                </div>
+            </div>
+            <div class="process-step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h3>Accompagnement</h3>
+                    <p>Après validation, nous vous accompagnons jusqu'au dépôt.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">Questions</div>
+                <h2 class="section-title">Vous vous posez sûrement ces questions</h2>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>Mon entreprise est-elle trop petite ?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Non. 30% des marchés publics sont réservés aux PME et artisans. Si vous avez +3 employés, des assurances à jour et des références, vous êtes éligible.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>Combien de temps prend un dossier ?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Avec nous : 1 à 2 semaines selon la complexité.
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>Quel est votre taux de réussite ?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Sur nos accompagnements complets : ~67% (2 marchés sur 3 déposés).
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>Dois-je payer avant le résultat ?</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Oui, nous facturons le montage, pas le résultat. Notre mission est de présenter un dossier conforme et professionnel.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-final">
+        <div class="container">
+            <h2>Prêt à décrocher vos prochains chantiers ?</h2>
+            <p>Premier échange gratuit et sans engagement.</p>
+            <div class="cta-buttons">
+                <a href="mailto:aoassistancebtp@gmail.com?subject=Demande%20analyse" class="btn btn-white btn-large">📧 Analyse gratuite</a>
+                <a href="tel:+33650030068" class="btn btn-outline btn-large">📞 06 50 03 00 68</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-about">
+                <h3>AO BTP Assistance</h3>
+                <p>Spécialiste des réponses aux appels d'offres pour entreprises du bâtiment. Partout en France.</p>
+                <div class="footer-contact">
+                    <span>📧</span>
+                    <a href="mailto:aoassistancebtp@gmail.com">aoassistancebtp@gmail.com</a>
+                </div>
+                <div class="footer-contact">
+                    <span>📞</span>
+                    <a href="tel:+33650030068">06 50 03 00 68</a>
+                </div>
+                <div class="footer-contact">
+                    <span>💬</span>
+                    <a href="https://wa.me/33650030068">WhatsApp</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                © 2024 AO BTP Assistance - Spécialiste Appels d'Offres BTP France
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/33650030068?text=Bonjour" class="whatsapp-float">💬</a>
+
+    <script>
+        function toggleFaq(element) {
+            const item = element.parentElement;
+            const answer = item.querySelector('.faq-answer');
+            const toggle = element.querySelector('.faq-toggle');
+            
+            if (answer.style.maxHeight) {
+                answer.style.maxHeight = null;
+                toggle.textContent = '+';
+            } else {
+                document.querySelectorAll('.faq-answer').forEach(a => a.style.maxHeight = null);
+                document.querySelectorAll('.faq-toggle').forEach(t => t.textContent = '+');
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+                toggle.textContent = '×';
+            }
+        }
+    </script>
+</body>
+</html>
